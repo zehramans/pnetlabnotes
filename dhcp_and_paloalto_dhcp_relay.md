@@ -8,23 +8,8 @@ Unlike a simple home network, the DHCP server is not located on the same subnet 
 
 The completed topology looks like this:
 
-```
-                 Internet
-                     │
-               VMware NAT
-                     │
-                 Cloud0 (PNETLab)
-                     │
-            Internet Router
-      G0/0 (DHCP)     G0/1 (200.100.100.1)
-                     │
-             Palo Alto Firewall
-      eth1/1               eth1/2             eth1/4
- 200.100.100.10       192.168.10.1       10.250.40.1
-                           │                   │
-                        Switch          DHCP Router
-                    VPC / Linux      10.250.40.2
-```
+<img width="538" height="685" alt="Screenshot 2026-07-26 214134" src="https://github.com/user-attachments/assets/4ed71037-02e0-4290-a945-4cb36cc1e5fe" />
+
 
 ---
 
