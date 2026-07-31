@@ -1,7 +1,8 @@
+
 # Cisco AAA Authentication with Ubuntu FreeRADIUS
 
 ## Project Goal
-
+<img width="665" height="833" alt="Screenshot 2026-07-31 120239" src="https://github.com/user-attachments/assets/781d12d8-bc92-46f7-ad33-3fc22e25d04e" />
 The goal of this project was to stop using local usernames on Cisco devices and instead authenticate administrators through a centralized RADIUS server.
 
 Instead of storing a username and password on every router and switch, every login request is sent to the Ubuntu server. The server checks whether the credentials are correct and replies with either an Access-Accept or an Access-Reject message.
