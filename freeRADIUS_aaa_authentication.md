@@ -21,33 +21,6 @@ This is how administrator authentication is commonly handled in enterprise envir
 
 ---
 
-## Lab Topology
-
-Internet
-
-↓
-
-Cloud0 (VMware NAT)
-
-↓
-
-Cisco Router (DHCP Server)
-
-↓
-
-Palo Alto Firewall
-
-↓
-
-Cisco Multilayer Switch
-
-↓
-
-Access Switches
-
-↓
-
-Ubuntu Server (FreeRADIUS)
 
 The Ubuntu server was connected to VLAN 20 (Servers VLAN).
 
