@@ -24,18 +24,17 @@ Linux Server ---/
 ```
 
 Without centralized logging:
-
-- Every device stores its own logs
-- Logs are lost after a reboot
-- Difficult to investigate incidents
+-Every device stores its own logs
+-Logs are lost after a reboot
+-Difficult to investigate incidents
 
 With centralized logging:
 
-- One location for every log
-- Easier troubleshooting
-- Security monitoring
-- Long-term log retention
-- Required in many enterprise environments
+-One location for every log
+-Easier troubleshooting
+-Security monitoring
+-Long-term log retention
+-Required in many enterprise environments
 
 ---
 
@@ -45,10 +44,10 @@ Imagine a user reports that the network was unavailable for five minutes.
 
 Without Syslog you would have to:
 
-- SSH into every switch
-- SSH into every router
-- Check firewall logs
-- Correlate timestamps manually
+-SSH into every switch
+-SSH into every router
+-Check firewall logs
+-Correlate timestamps manually
 
 With Syslog:
 
@@ -69,11 +68,11 @@ Palo Alto Firewall ----/
 
 Each device generates events such as:
 
-- Interface goes down
-- User logs in
-- Configuration changes
-- Routing changes
-- Authentication failures
+-Interface goes down
+-User logs in
+-Configuration changes
+-Routing changes
+-Authentication failures
 
 These events are sent over UDP port **514** by default.
 
@@ -81,28 +80,9 @@ These events are sent over UDP port **514** by default.
 
 # UDP vs TCP
 
-Syslog traditionally uses:
+Syslog traditionally uses UDP 514
 
-- UDP 514
-
-Advantages:
-
-- Fast
-- Very low overhead
-- No connection establishment
-
-Disadvantages:
-
-- No delivery guarantee
-
-Modern implementations also support:
-
-- TCP 514
-
-Advantages:
-
-- Reliable delivery
-- Better for WAN links
+Modern implementations also support TCP 514
 
 ---
 
@@ -216,10 +196,7 @@ Without this module the server cannot receive Syslog packets.
 
 Creates a UDP listener.
 
-Meaning:
-
-- type = UDP input
-- port = 514
+Meaning type = UDP input port = 514
 
 Now Ubuntu waits for incoming Syslog packets.
 
@@ -505,11 +482,10 @@ Example:
 192.168.20.2 > 192.168.20.21 SYSLOG local7.notice
 ```
 
-This confirms:
-
-- Cisco transmitted the packet.
-- The packet reached Ubuntu.
-- The network path is working.
+This confirms
+Cisco transmitted the packet.
+The packet reached Ubuntu.
+The network path is working.
 
 If packets appear in `tcpdump` but not in the log file, the issue is with rsyslog processing rather than network connectivity.
 
@@ -547,7 +523,6 @@ This stores Cisco logs in a dedicated file.
 ---
 
 # Skills Learned
-
 - What Syslog is
 - Why centralized logging is important
 - UDP vs TCP Syslog
